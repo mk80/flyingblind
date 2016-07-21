@@ -11,8 +11,25 @@
 
 using namespace std;
 
+/* Sensor class to maintain readings from sensors */
+class Sensor
+{
+    int value;
+    
+    
+};
+
+/* Controller class to control the flight controller */
+/* This will control movement of the copter          */
+class Controller
+{
+    int forward, back, left, right, up, down;
+    
+    
+};
+
 /*
- * 
+ * Main body to operate copter autonomously
  */
 int main(int argc, char** argv) {
 
