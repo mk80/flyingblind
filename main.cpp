@@ -20,7 +20,7 @@ class Sensor
     
 public:
     /* constructor */
-    void sensorConstruct(string facing)
+    Sensor(string facing)
     {
         placement = facing;
         value = 0;
@@ -49,7 +49,7 @@ class Controller
     
 public:
     /* constructor */
-    void controllerConstruct(string name)
+    void Controller(string name)
     {
         id = name;
         forward = back = left = right = up = down = 0;
