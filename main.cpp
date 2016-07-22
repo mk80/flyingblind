@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include <string>
 
+
 using namespace std;
 
 /* Sensor class to maintain readings from sensors */
@@ -27,9 +28,9 @@ public:
     }
     
     /* methods */
-    void setPlacement(string facing)
+    void setPlacement(string location)
     {
-        placement = facing;
+        placement = location;
     }
     
     int getValue()
@@ -45,23 +46,50 @@ public:
 class Controller
 {
     string id;
-    int forward, back, left, right, up, down;
+    int motor1, motor2, motor3, motor4;
     
 public:
     /* constructor */
-    void Controller(string name)
+    Controller(string name)
     {
         id = name;
-        forward = back = left = right = up = down = 0;
+        motor1 = motor2 = motor3 = motor4 = 0;
     }
     
     /* methods */
-    void setMovement(string movement, int amount)
+    void moveForward(int velo)
     {
-        /* this will need to determine which field to adjust */
+        /* this will set for forward motion */
     }
     
-    void motorControl(int num, int amount)
+    void moveBackward(int velo)
+    {
+        /* this will set for backward motion */
+    }
+    
+    void moveRight(int velo)
+    {
+        /* this will set for movement right */
+    }
+    
+    void moveLeft(int velo)
+    {
+        /* this will set for movement left */
+    }
+    
+    void moveUp(int velo)
+    {
+        /* this will set for increased altitude */
+    }
+    
+    void moveDown(int velo)
+    {
+        /* this will set for decresed altitude */
+    }
+    
+private:
+    void motorControl(int num1, int num2, int num3, int num4,
+            int amount1, int amount2, int amount3, int amount4)
     {
         /* this will need to adjust motor rpm */
     }
